@@ -26,7 +26,6 @@ $('#btn_print').click(()=>Print(arr_students));
 function Print(students){
   students.map(e=>{
     $("#data").empty();
-    $("#data1").empty();
     $('#data1').append('<p>Name: '+e.name+'</p>'+'<p>TechPoints: '+e.TechPoints+'</p>'+
      '<p>LifePoints: '+e.LifePoints+'</p>'+'<p>status: '+e.status+'</p>');
   })
@@ -34,9 +33,19 @@ function Print(students){
 
 // filtar
 $('#btn_run').click(function(){
-  var consulta=arr_students.filter(function (c) {
+  $("#data1").empty();
+  var run=arr_students.filter(function (c) {
   return c.TechPoints >70
 });
-Print(consulta);
-console.log(consulta);
+Print(run);
+console.log(run);
+});
+
+$('#btn_update').click(function(){
+  $("#data1").empty();
+  var update=arr_students.filter(function (c) {
+  return c.TechPoints >70
+});
+Print(update);
+console.log(update);
 });

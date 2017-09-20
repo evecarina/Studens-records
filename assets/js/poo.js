@@ -1,5 +1,5 @@
 const app={
-  arr_students:[ ],
+  arr_students:[],
   iniciar:function(){
     app.ejecutar();
   },
