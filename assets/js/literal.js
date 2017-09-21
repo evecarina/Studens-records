@@ -6,15 +6,8 @@ const app={
     this.LifePoints=LifePoints,
     this.status=status
   },
-
   init:function(){
     app.clik();
-  },
-  clik:function(){
-    $('#btn_add').click(app.configuration);
-    $('#btn_print').click(()=>app.prints(app.arr_students));
-    $('#btn_update').click(app.update);
-    $('#btn_run').click(app.run);
   },
   configuration:function(){
 
@@ -29,7 +22,7 @@ const app={
     app.show(app.arr_students[app.arr_students.length-1]);
   },
 
-  show:function(a){ 
+  show:function(a){
     if(a){
     		$("#data").empty();
     		$("#data").append(`<p>${a.name}</p>
@@ -61,6 +54,12 @@ const app={
     return c.TechPoints >70
   })
   app.prints(run);
+},
+  clik:function(){
+    $('#btn_add').click(app.configuration);
+    $('#btn_print').click(()=>app.prints(app.arr_students));
+    $('#btn_update').click(app.update);
+    $('#btn_run').click(app.run);
   }
 }
 $(document).ready(app.init );
