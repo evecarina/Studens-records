@@ -11,7 +11,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-12">
           <button id='btn_add' class="btn btn-warning" type="button" name="button">Add Studens</button>
           <button id='btn_print' class="btn btn-warning" type="button" name="button">Print all</button>
           <button id="btn_update"class="btn btn-warning" type="button" name="button">Update</button>
@@ -19,6 +19,30 @@
         </div>
       </div>
     </div>
+    <!-- formulario -->
+    <form role="form">
+      <div class="form-group col-lg-3">
+        <label>Name</label>
+        <input type="text" class="form-control"
+               placeholder="enter name">
+      </div>
+      <div class="form-group col-lg-3">
+        <label>TechPoints</label>
+        <input type="number" class="form-control"
+               placeholder="enter TechPoints ">
+      </div>
+      <div class="form-group col-lg-3">
+        <label >LifePoints</label>
+        <input type="number" class="form-control"
+               placeholder="enter LifePoints ">
+      </div>
+      <div class="form-group col-lg-3">
+        <label>status</label>
+        <input type="text" class="form-control"
+               placeholder="enter status">
+      </div>
+      <button type="submit" class="btn btn-default">Enviar</button>
+    </form>
     <div class="container-fluid">
       <div id='data'></div>
     </div>
@@ -26,7 +50,7 @@
       <div id='data1'></div>
     </div>
     <script src="assets/js/main.js" type="text/javascript"> </script>
-    <!-- <script src="assets/js/poo.js" type="text/javascript"> </script> -->
+    <!-- <script src="assets/js/literal.js" type="text/javascript"> </script> -->
 
   </body>
 </html>

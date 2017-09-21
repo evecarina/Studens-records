@@ -21,8 +21,8 @@ $('#btn_add').click(function(){
       '<p>LifePoints: '+arr_students[i].LifePoints+'</p>'+'<p>status: '+arr_students[i].status+'</p>');
     }
 });
-$('#btn_print').click(()=>Print(arr_students));
 
+$('#btn_print').click(()=>Print(arr_students));
 function Print(students){
   students.map(e=>{
     $("#data").empty();
@@ -30,15 +30,14 @@ function Print(students){
      '<p>LifePoints: '+e.LifePoints+'</p>'+'<p>status: '+e.status+'</p>');
   })
 }
-
 // filtar
 $('#btn_run').click(function(){
   $("#data1").empty();
   var run=arr_students.filter(function (c) {
   return c.TechPoints >70
 });
+
 Print(run);
-console.log(run);
 });
 
 $('#btn_update').click(function(){
@@ -47,5 +46,4 @@ $('#btn_update').click(function(){
   return c.TechPoints >70
 });
 Print(update);
-console.log(update);
 });
