@@ -25,22 +25,30 @@ const app={
     LifePoints=parseInt (LifePoints);
     let s= new app.data(name,TechPoints,LifePoints,'activite');
     app.arr_students.push(s);
-    for(var i=0; i<app.arr_students.length;i++){
-      $('#data').empty();
-      $('#data').append('<p>Name: '+ app.arr_students[i].name+'</p>'+'<p>TechPoints: '+app.arr_students[i].TechPoints+'</p>'+
-       '<p>LifePoints: '+app.arr_students[i].LifePoints+'</p>'+'<p>status: '+app.arr_students[i].status+'</p>');
-     }
+
+    app.show(app.arr_students[app.arr_students.length-1]);
+  },
+
+  show:function(a){ 
+    if(a){
+    		$("#data").empty();
+    		$("#data").append(`<p>${a.name}</p>
+          <p>TechPoints: ${a.TechPoints}%</p>
+          <p>LifePoints: ${a.LifePoints}%</p>
+          <p>status: ${a.status}</p></div>`);
+    	}
+
   },
   prints:function(students){
-    alert('ada');
     students.map(e=>{
       $("#data").empty();
-      $('#data1').append('<p>Name: '+e.name+'</p>'+'<p>TechPoints: '+e.TechPoints+'</p>'+
-       '<p>LifePoints: '+e.LifePoints+'</p>'+'<p>status: '+e.status+'</p>');
+      $('#data1').append(`<p>${e.name}</p>
+        <p>TechPoints: ${e.TechPoints}%</p>
+        <p>LifePoints: ${e.LifePoints}%</p>
+        <p>status: ${e.status}</p></div>`);
     })
   },
   update:function(){
-    alert('adas');
     $("#data1").empty();
     let update=app.arr_students.filter(function (c) {
     return c.TechPoints >70
@@ -48,7 +56,6 @@ const app={
   app.prints(update);
 },
   run:function(){
-    alert('adas');
     $("#data1").empty();
     let run=app.arr_students.filter(function (c) {
     return c.TechPoints >70
