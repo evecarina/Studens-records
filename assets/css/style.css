@@ -1,17 +1,14 @@
-header{
-
-  /*background-image: url(../img/f1.jpg);*/
-    background-size: cover;
-}
 
 body{
     background-color: #f7b617;
     font-family: 'Passion One', cursive;
 
 }
-
+header{
+  /*height: 500px;*/
+}
 #page{
-    background-color: white;
+    background-color: #fff;
     width: 90%;
     margin: 0 auto;
     margin-top: 1%;
@@ -19,11 +16,9 @@ body{
     border-radius: 5px;
 }
 
-#data{
-    margin-right: 1%;
-}
 img{
     /*margin: 3%;*/
+    height: 80%;
     width: 100%;
 }
 
